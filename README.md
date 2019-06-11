@@ -1,4 +1,4 @@
-# silva
+# Silva
 
 An interactive tool to visualize English word etymology.
 
