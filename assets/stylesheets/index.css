@@ -1,0 +1,32 @@
+.path {
+    fill: none;
+    stroke: #684f36;
+    stroke-opacity: 0.9;
+    stroke-width: 1.5;
+}
+
+.circle {
+    fill: #005a0b;
+}
+
+.text {
+    opacity: .3;
+}
+
+.node:hover {
+    cursor: pointer;
+}
+
+.node:hover .text {
+    opacity: 1;
+    font-weight: bold;
+}
+
+.node:hover .circle {
+    stroke: white;
+    stroke-width: 3;
+}
+
+.node:hover .text-shadow {
+    stroke: white;
+}
