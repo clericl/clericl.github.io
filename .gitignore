@@ -4,10 +4,19 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 026fb132c4d9062e8c4c59b4ccce66412fea1854
 lerna-debug.log*
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 979c8a329c505729d1b313f1c26a5ff0539f787b
+>>>>>>> 026fb132c4d9062e8c4c59b4ccce66412fea1854
 
 # Runtime data
 pids
@@ -20,12 +29,27 @@ lib-cov
 
 # Coverage directory used by tools like istanbul
 coverage
+<<<<<<< HEAD
 *.lcov
+=======
+<<<<<<< HEAD
+*.lcov
+=======
+>>>>>>> 979c8a329c505729d1b313f1c26a5ff0539f787b
+>>>>>>> 026fb132c4d9062e8c4c59b4ccce66412fea1854
 
 # nyc test coverage
 .nyc_output
 
+<<<<<<< HEAD
 # Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
+=======
+<<<<<<< HEAD
+# Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
+=======
+# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+>>>>>>> 979c8a329c505729d1b313f1c26a5ff0539f787b
+>>>>>>> 026fb132c4d9062e8c4c59b4ccce66412fea1854
 .grunt
 
 # Bower dependency directory (https://bower.io/)
@@ -44,9 +68,18 @@ jspm_packages/
 # TypeScript v1 declaration files
 typings/
 
+<<<<<<< HEAD
 # TypeScript cache
 *.tsbuildinfo
 
+=======
+<<<<<<< HEAD
+# TypeScript cache
+*.tsbuildinfo
+
+=======
+>>>>>>> 979c8a329c505729d1b313f1c26a5ff0539f787b
+>>>>>>> 026fb132c4d9062e8c4c59b4ccce66412fea1854
 # Optional npm cache directory
 .npm
 
@@ -64,6 +97,10 @@ typings/
 
 # dotenv environment variables file
 .env
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 026fb132c4d9062e8c4c59b4ccce66412fea1854
 .env.test
 
 # parcel-bundler cache (https://parceljs.org/)
@@ -85,4 +122,13 @@ typings/
 .fusebox/
 
 # DynamoDB Local files
+<<<<<<< HEAD
 .dynamodb/
+=======
+.dynamodb/
+=======
+
+# next.js build output
+.next
+>>>>>>> 979c8a329c505729d1b313f1c26a5ff0539f787b
+>>>>>>> 026fb132c4d9062e8c4c59b4ccce66412fea1854
