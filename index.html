@@ -10,41 +10,88 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Muli&display=swap" rel="stylesheet">
+		<script src="https://code.iconify.design/1/1.0.2/iconify.min.js"></script>
+		<script src="https://d3js.org/d3.v3.min.js"></script>
 		<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/custom.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
-
 		<!-- Sidebar -->
-			<section id="sidebar">
-				<div class="inner">
-					<nav>
-						<ul>
-							<li><a href="#intro">Welcome</a></li>
-							<li><a href="#one">About</a></li>
-							<li><a href="#two">Projects</a></li>
-							<li><a href="#three">Get in touch</a></li>
-						</ul>
-					</nav>
-				</div>
-			</section>
-
+		<section id="sidebar">
+			<div class="inner">
+				<nav>
+					<ul>
+						<li><a href="#intro">Welcome</a></li>
+						<li><a href="#one">About</a></li>
+						<li><a href="#two">Projects</a></li>
+						<li><a href="#three">Get in touch</a></li>
+					</ul>
+				</nav>
+			</div>
+		</section>
+		
 		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Intro -->
-					<section id="intro" class="wrapper style1 fullscreen fade-up">
-						<div class="inner">
-							<h1>ERIC LIANG</h1>
-							<p>software developer • nyc</p>
-							<ul class="actions">
-								<li><a href="#three" class="button scrolly">Contact</a></li>
-							</ul>
+		<div id="wrapper">
+			
+			<!-- Intro -->
+			<section id="intro" class="wrapper style1 fullscreen fade-up">
+				<!-- <svg id="svg"></svg> -->
+				<div class="inner">
+					<div class="scrabble-boxes">
+						<div class="scrabble-box" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+							<div class="scrabble-inner-box"></div>
 						</div>
-					</section>
+						<div class="scrabble-box" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+							<div class="scrabble-inner-box"></div>
+						</div>
+						<div class="scrabble-box" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+							<div class="scrabble-inner-box"></div>
+						</div>
+						<div class="scrabble-box" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+							<div class="scrabble-inner-box"></div>
+						</div>
+						<div class="scrabble-box" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+							<div class="scrabble-inner-box"></div>
+						</div>
+						<div class="scrabble-box" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+							<div class="scrabble-inner-box"></div>
+						</div>
+						<div class="scrabble-box" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+							<div class="scrabble-inner-box"></div>
+						</div>
+						<div class="scrabble-box" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+							<div class="scrabble-inner-box"></div>
+						</div>
+						<div class="scrabble-box" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+							<div class="scrabble-inner-box"></div>
+						</div>
+					</div>
+					<div class="welcome-items">
+						<h1 class="rainbow_text_animated">ERIC LIANG</h1>
+						<div class="scrabble">
+							<h1 class="name-letter" draggable="true" ondragstart="dragStartHandler(event);">E</h1>
+							<h1 class="name-letter" draggable="true" ondragstart="dragStartHandler(event);">R</h1>
+							<h1 class="name-letter" draggable="true" ondragstart="dragStartHandler(event);">I</h1>
+							<h1 class="name-letter" draggable="true" ondragstart="dragStartHandler(event);">C</h1>
+							<h1 class="name-letter">&nbsp;</h1>
+							<h1 class="name-letter" draggable="true" ondragstart="dragStartHandler(event);">L</h1>
+							<h1 class="name-letter" draggable="true" ondragstart="dragStartHandler(event);">I</h1>
+							<h1 class="name-letter" draggable="true" ondragstart="dragStartHandler(event);">A</h1>
+							<h1 class="name-letter" draggable="true" ondragstart="dragStartHandler(event);">N</h1>
+							<h1 class="name-letter" draggable="true" ondragstart="dragStartHandler(event);">G</h1>
+						</div>
+						<p id="subtitle">software developer • word nerd • nyc</p>
+						<ul class="actions">
+							<li><div class="button" id="game-start">CLICK TO PLAY</button></li>
+						</ul>
+					</div>
+				</div>
 
+				<script src="assets/js/scrabble.js"></script>
+			</section>
+			
 				<!-- One -->
 					<section id="one" class="wrapper style2 spotlights">
 						<section>
@@ -55,7 +102,7 @@
 									<p class="justify">I'm a Brooklyn native with a bachelor's degree in linguistics as well as past lives in the book publishing industry and as a karaoke bartender. My bookshelf is full of fantasy and science fiction, and I'm always looking to learn more about psycholinguistics, natural language processing, machine learning, and sociopolitics in Asian American and LGBTQIA+ spaces.</p>
 								</div>
 							</div>
-							<a href="#" class="image"><img src="images/photo.jpg" alt="" data-position="center center" /></a>
+							<img src="images/photo.jpg" alt="" data-position="center center" class="face-photo image" /></a>
 						</section>
 						<section>
 							<div class="skill-content">
@@ -63,7 +110,7 @@
 									<h2>TOOLKIT</h2>
 									<ul class="image skill-list" style="margin:none;">
 											<i class="devicon-react-original colored" title="React.js"></i>
-											<img src="images/redux.png" class="code-icon" title="Redux.js">
+											<span class="iconify" data-icon="simple-icons:redux" data-inline="false" title="Redux.js"></span>
 											<i class="devicon-javascript-plain colored" title="JavaScript ES6"></i>
 											<i class="devicon-d3js-plain colored" title="D3.js"></i>
 											<i class="devicon-ruby-plain colored" title="Ruby"></i>
