@@ -306,6 +306,7 @@ function gameEnd() {
     const pointsBox = document.querySelector(".points");
     const usedBox = document.querySelector(".used-words");
 
+    resetLetters();
     points = 0;
     used = [];
     innerBox.innerHTML = "";
