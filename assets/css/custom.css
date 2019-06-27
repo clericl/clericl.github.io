@@ -305,6 +305,12 @@
     width: max-content;
 }
 
+@media screen and (min-width: 1681px) {
+    #game-end {
+        top: 48px;
+    }
+}
+
 @media screen and (max-width: 736px) {
     #intro {
         height: 35em;
@@ -348,5 +354,13 @@
 
     .rainbow_text_animated {
         width: max-content;
+    }
+
+    .welcome-items {
+        width: 90%;
+    }
+    
+    .used-words {
+        max-width: 90%;
     }
 }
