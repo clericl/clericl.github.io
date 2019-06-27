@@ -284,7 +284,7 @@
     top: 40px;
     left: 50%;
     transform: translate(-50%, 0);
-    margin: .7em;
+    margin: .75em;
     opacity: 0;
     transition: opacity .3s ease-in;
 }
@@ -363,4 +363,20 @@
     .used-words {
         max-width: 90%;
     }
+}
+
+.mycontact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.mycontact > li {
+    margin-top: 1em;
+}
+
+.myicons {
+    font-size: 1.5em;
 }
