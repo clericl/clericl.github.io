@@ -9,6 +9,7 @@
     flex-direction: column;
     align-items: center;
     transition: transform .4s ease-out;
+    position: relative;
 }
 
 .justify {
@@ -118,6 +119,7 @@
 
 #subtitle {
     color: white;
+    transition: opacity .4s ease-in-out, transform .4s ease-in-out;
 }
 
 .rainbow_text_animated:hover {
@@ -168,36 +170,125 @@
     display: none;
 }
 
-.scrabble-boxes {
+.scrabble-box {
     display: none;
     position: absolute;
     top: 1em;
     left: 50%;
     transform: translate(-50%, 0);
+    height: 5em;
+    width: 30em;
+    border: .2em dashed white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    filter: drop-shadow(4px 4px 2px #262626);
+    transition: opacity .3s ease-in;
+}
+
+.scrabble-inner-box {
+    height: 100%;
+    width: max-content;
+    color: #ffffff;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3.75em;
+    margin-bottom: 0.3em;
+    display: flex;
+    justify-content: center;
+}
+
+.name-letter {
+    transition: color .1s ease-out;
+}
+
+.name-letter:hover {
+    cursor: pointer;
+    color: #c5c5c5;
+}
+
+.modal-background {
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity .2s linear;
+}
+
+.message {
+    width: max-content;
+    position: absolute;
+    z-index: 3;
+    left: -100%;
+    top: 45%;
+    font-size: 3em;
+    font-family: 'Josefin Sans', sans-serif;
+    transform: translate(-50%, 0);
+}
+
+#message {
+    display: block;
+    opacity: 1;
+}
+
+.used-words {
+    width: max-content;
+    max-width: 70%;
+    position: absolute;
+    top: -3em;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 1.5em;
+    color: white;
+    font-family: 'Muli', serif;
+    text-align: center;
+    filter: drop-shadow(2px 2px 2px #262626);
+    transition: opacity .3s ease-in;
+}
+
+.points {
+    width: max-content;
+    position: absolute;
+    top: -3em;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: white;
+    font-size: 3em;
+    font-family: 'Josefin Sans', sans-serif;
+    filter: drop-shadow(2px 2px 2px #262626);
+    transition: opacity .3s ease-in;
+}
+
+.game-buttons {
+    position: relative;
+}
+
+#game-end {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin: .5em;
     opacity: 0;
     transition: opacity .3s ease-in;
 }
 
-.scrabble-box {
-    height: 4.5em;
-    width: 4em;
-    border: .2em dashed white;
-    margin: .5em;
+.game-info {
+    position: absolute;
+    bottom: 4.5em;
+    opacity: 0;
+    font-family: 'Muli', serif;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    filter: drop-shadow(4px 4px 2px #262626);
+    transform: translateY(-15em);
+    transition: opacity .4s ease-in-out, transform .4s ease-in-out;
 }
 
-.scrabble-box > * {
-    margin-top: .25em;
-}
-
-/* .scrabble-inner-box {
+.game-info > div {
     width: max-content;
-    height: max-content;
-    color: #ffffff;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 3.75em;
-    margin-top: .25em;
-} */
+}

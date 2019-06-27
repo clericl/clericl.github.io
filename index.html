@@ -18,6 +18,9 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
+		<div class="modal-background">
+			<div class="message" id="message"></div>
+		</div>
 		<!-- Sidebar -->
 		<section id="sidebar">
 			<div class="inner">
@@ -39,52 +42,33 @@
 			<section id="intro" class="wrapper style1 fullscreen fade-up">
 				<!-- <svg id="svg"></svg> -->
 				<div class="inner">
-					<div class="scrabble-boxes">
-						<div class="scrabble-box" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
-							<div class="scrabble-inner-box"></div>
-						</div>
-						<div class="scrabble-box" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
-							<div class="scrabble-inner-box"></div>
-						</div>
-						<div class="scrabble-box" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
-							<div class="scrabble-inner-box"></div>
-						</div>
-						<div class="scrabble-box" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
-							<div class="scrabble-inner-box"></div>
-						</div>
-						<div class="scrabble-box" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
-							<div class="scrabble-inner-box"></div>
-						</div>
-						<div class="scrabble-box" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
-							<div class="scrabble-inner-box"></div>
-						</div>
-						<div class="scrabble-box" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
-							<div class="scrabble-inner-box"></div>
-						</div>
-						<div class="scrabble-box" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
-							<div class="scrabble-inner-box"></div>
-						</div>
-						<div class="scrabble-box" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
-							<div class="scrabble-inner-box"></div>
-						</div>
+					<div class="points"></div>
+					<div class="used-words"></div>
+					<div class="scrabble-box">
+						<div class="scrabble-inner-box"></div>
 					</div>
 					<div class="welcome-items">
 						<h1 class="rainbow_text_animated">ERIC LIANG</h1>
 						<div class="scrabble">
-							<h1 class="name-letter" draggable="true" ondragstart="dragStartHandler(event);">E</h1>
-							<h1 class="name-letter" draggable="true" ondragstart="dragStartHandler(event);">R</h1>
-							<h1 class="name-letter" draggable="true" ondragstart="dragStartHandler(event);">I</h1>
-							<h1 class="name-letter" draggable="true" ondragstart="dragStartHandler(event);">C</h1>
+							<h1 class="name-letter" onclick="letterClick(event)">E</h1>
+							<h1 class="name-letter" onclick="letterClick(event)">R</h1>
+							<h1 class="name-letter" onclick="letterClick(event)">I</h1>
+							<h1 class="name-letter" onclick="letterClick(event)">C</h1>
 							<h1 class="name-letter">&nbsp;</h1>
-							<h1 class="name-letter" draggable="true" ondragstart="dragStartHandler(event);">L</h1>
-							<h1 class="name-letter" draggable="true" ondragstart="dragStartHandler(event);">I</h1>
-							<h1 class="name-letter" draggable="true" ondragstart="dragStartHandler(event);">A</h1>
-							<h1 class="name-letter" draggable="true" ondragstart="dragStartHandler(event);">N</h1>
-							<h1 class="name-letter" draggable="true" ondragstart="dragStartHandler(event);">G</h1>
+							<h1 class="name-letter" onclick="letterClick(event)">L</h1>
+							<h1 class="name-letter" onclick="letterClick(event)">I</h1>
+							<h1 class="name-letter" onclick="letterClick(event)">A</h1>
+							<h1 class="name-letter" onclick="letterClick(event)">N</h1>
+							<h1 class="name-letter" onclick="letterClick(event)">G</h1>
 						</div>
 						<p id="subtitle">software developer • word nerd • nyc</p>
-						<ul class="actions">
+						<div class="game-info">
+							<div>Click on letters in my name to make words and score points (the longer the better)!</div>
+							<div>There are 139 possible words. Score 25 points to win!</div>
+						</div>
+						<ul class="actions game-buttons">
 							<li><div class="button" id="game-start">CLICK TO PLAY</button></li>
+							<li><div class="button" id="game-end">EXIT GAME</button></li>
 						</ul>
 					</div>
 				</div>
