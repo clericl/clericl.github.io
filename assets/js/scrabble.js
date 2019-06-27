@@ -160,11 +160,12 @@ function letterClick(e) {
     if (points < 25) {
         const box = document.querySelector(".scrabble-box");
         clicked = e.target;
-        if (clicked.innerHTML !== "&nbsp;") box.children[0].innerHTML += clicked.innerHTML;
-        clicked.parentNode.removeChild(clicked);
-        clicked = null;
-    
-        setTimeout(checkAnswer, 200);
+        if (clicked.innerHTML !== "&nbsp;") {
+            box.children[0].innerHTML += clicked.innerHTML;
+            clicked.parentNode.removeChild(clicked);
+            clicked = null;
+            setTimeout(checkAnswer, 200);
+        }
     }
 }
 
