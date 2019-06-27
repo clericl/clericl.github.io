@@ -14,7 +14,7 @@
 
 .justify {
     text-align: center;
-    /* color: white; */
+    color: white;
 }
 
 .code-icon {
@@ -229,6 +229,18 @@
     transform: translate(-50%, 0);
 }
 
+@media screen and (min-width: 1280px) {
+    .message {
+        margin-left: 3em;
+    }
+}
+
+@media screen and (min-width: 980px) {
+    .message {
+        margin-left: none;
+    }
+}
+
 #message {
     display: block;
     opacity: 1;
@@ -291,4 +303,50 @@
 
 .game-info > div {
     width: max-content;
+}
+
+@media screen and (max-width: 736px) {
+    #intro {
+        height: 35em;
+    }
+
+    .scrabble {
+        margin-bottom: 1em;
+    }
+
+    h1 {
+        font-size: 4em;
+    }
+
+    .used-words {
+        top: -1.5em;
+    }
+
+    .points {
+        top: -2em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .scrabble-box {
+        width: 25em;
+    }
+
+    .game-info > div {
+        width: 85%;
+        line-height: 1;
+        text-align: center;
+    }
+
+    .game-info {
+        bottom: 5em;
+    }
+
+    #game-end {
+        margin: .5em 0;
+    }
+
+    .rainbow_text_animated {
+        width: max-content;
+    }
 }
