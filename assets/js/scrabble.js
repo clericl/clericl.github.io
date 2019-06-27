@@ -290,7 +290,7 @@ function gameStart() {
 
     button.removeEventListener("click", gameStart);
     button.addEventListener("click", resetLetters);
-    button.innerHTML = "RESET";
+    button.innerHTML = "CLEAR WORD";
 }
 
 function gameEnd() {
