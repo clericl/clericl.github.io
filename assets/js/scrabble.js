@@ -160,7 +160,7 @@ function letterClick(e) {
     if (points < 25) {
         const box = document.querySelector(".scrabble-box");
         clicked = e.target;
-        box.children[0].innerHTML += clicked.innerHTML;
+        if (clicked.innerHTML !== "&nbsp;") box.children[0].innerHTML += clicked.innerHTML;
         clicked.parentNode.removeChild(clicked);
         clicked = null;
     
