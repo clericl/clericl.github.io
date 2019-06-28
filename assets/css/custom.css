@@ -119,6 +119,7 @@
 
 #subtitle {
     color: white;
+    text-align: center;
     transition: opacity .4s ease-in-out, transform .4s ease-in-out;
 }
 
@@ -293,6 +294,7 @@
     position: absolute;
     bottom: 4.5em;
     opacity: 0;
+    color: white;
     font-family: 'Muli', serif;
     display: flex;
     flex-direction: column;

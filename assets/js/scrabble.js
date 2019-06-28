@@ -204,7 +204,7 @@ function checkAnswer() {
         if (points >= 25) {
             showMessage(0);
             gameInfo.children[0].innerHTML = "Thanks for playing!";
-            gameInfo.children[1].innerHTML = "Feel free to check out the other projects I've worked on."
+            gameInfo.children[1].innerHTML = "Feel free to dive downward into my other projects."
             pointsBox.style.color = "gold";
 
         } else {

@@ -98,7 +98,13 @@ input, select, textarea {
 	}
 
 	body {
-		background: #418ab4;
+		background-attachment: fixed;
+		background-image: url("images/overlay3.svg"), linear-gradient(135deg, #83ddff 5%, #30a2c5 40%, #48547d);
+		background-color: transparent;
+		background-position: top right;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		position: relative;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -2889,8 +2895,8 @@ input, select, textarea {
 				opacity: 1;
 			}
 
-		.spotlights > section:nth-child(1) {
-			background-color: rgba(0, 0, 0, 0.25);
+		.spotlights > section:nth-child(2) {
+			background-color: rgba(0, 0, 0, 0.15);
 		}
 
 		/* .spotlights > section:nth-child(2) {
@@ -3066,31 +3072,39 @@ input, select, textarea {
 			}
 
 		.wrapper.alt {
-			background-color: #3182b0;
+			/* background-color: #3182b0; */
+			background-color: rgba(0, 0, 0, 0.10);
 		}
-
-		.wrapper.style1 {
-			background-color: #418ab4;
-		}
-
-		.wrapper.style1-alt {
-			background-color: #3b6f8d;
-		}
-
+		
 		.wrapper.style2 {
-			background-color: #7ea5bb;
+			/* background-color: #325c86ab; */
+			/* background-color: #184057; */
+			background-color: rgba(0, 0, 0, 0.30);
 		}
 
 		.wrapper.style2-alt {
-			background-color: #436374;
+			/* background-color: #436374ab; */
+			background-color: rgba(0, 0, 0, 0.40);
 		}
-
+		
 		.wrapper.style3 {
-			background-color: #265875;
+			/* background-color: #13456ecc; */
+			background-color: rgba(0, 0, 0, 0.50);
 		}
 
 		.wrapper.style3-alt {
-			background-color: #244c62;
+			/* background-color: #244c62ab; */
+			background-color: rgba(0, 0, 0, 0.60);
+		}
+
+		.wrapper.style1 {
+			/* background-color: #002e53ab; */
+			background-color: rgba(0, 0, 0, 0.70);
+		}
+
+		.wrapper.style1-alt {
+			/* background-color: #001b36ab; */
+			background-color: rgba(0, 0, 0, 0.80);
 		}
 
 		.wrapper.fullscreen {
@@ -3700,7 +3714,8 @@ input, select, textarea {
 
 	#intro {
 		background-attachment: fixed;
-		/* background-image: url("images/intro.svg"); */
+		/* background-image: url("images/overlay3.svg"), linear-gradient(135deg, #83ddff 5%, #30a2c5 40%, #48547d); */
+		background-color: transparent;
 		background-position: top right;
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
