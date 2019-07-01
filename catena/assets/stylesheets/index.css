@@ -171,7 +171,7 @@ body {
 }
 
 .background {
-    background-image: radial-gradient(farthest-corner at 0 0, white, white, white, #cecece, #8c8c8c);
+    background-image: radial-gradient(farthest-corner at 0 0, white, white, white, #cecece, #636363);
     position: fixed;
     top: 0;
     bottom: 0;
