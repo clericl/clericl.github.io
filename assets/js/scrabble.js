@@ -1,4 +1,5 @@
 let clicked = null;
+let keyboard = false;
 let points, used;
 
 const messages = [
@@ -248,6 +249,27 @@ function toggleModal() {
     }
 }
 
+function enableKeyboard(e) {
+    if (e.key === "Backspace") {
+        e.preventDefault();
+        resetLetters();
+    } else if (Array.from(document.querySelectorAll(".name-letter")).map(letter => letter.innerHTML.toLowerCase()).includes(e.key)) {
+        e.preventDefault();
+        Array.from(document.querySelectorAll(".name-letter")).filter(letter => letter.innerHTML.toLowerCase() === e.key)[0].click();
+    }
+}
+
+function disableKeyboard() {
+    document.removeEventListener("keydown", enableKeyboard);
+    keyboard = false;
+}
+
+function toggleKeyboard(e) {
+    if (e.key === "Control" || e.key === "Command") {
+        keyboard ? disableKeyboard() : document.addEventListener("keydown", enableKeyboard);
+    }
+}
+
 function gameStart() {
     const welcome = document.querySelector(".welcome-items");
     const rainbow = document.querySelector(".rainbow_text_animated");
@@ -264,8 +286,8 @@ function gameStart() {
     used = [];
     pointsBox.innerHTML = "";
     usedBox.innerHTML = "";
-    gameInfo.children[0].innerHTML = "Click on letters in my name to make words and score points (the longer the better)!";
-            gameInfo.children[1].innerHTML = "There are 139 possible words. Score 25 points to win!"
+    gameInfo.children[0].innerHTML = "Click on (or type) letters in my name to make words and score points!";
+            gameInfo.children[1].innerHTML = "Longer words are worth more points. Score 25 points to win!"
     
     rainbow.style.display = "none";
     letters.style.display = "flex";
@@ -292,6 +314,11 @@ function gameStart() {
     button.removeEventListener("click", gameStart);
     button.addEventListener("click", resetLetters);
     button.innerHTML = "CLEAR WORD";
+
+    document.addEventListener("keydown", enableKeyboard);
+    keyboard = true;
+    document.addEventListener("keydown", toggleKeyboard);
+    document.addEventListener("keyup", toggleKeyboard);
 }
 
 function gameEnd() {
@@ -332,6 +359,10 @@ function gameEnd() {
     button.removeEventListener("click", resetLetters);
     button.addEventListener("click", gameStart);
     button.innerHTML = "CLICK TO PLAY";
+
+    disableKeyboard();
+    document.removeEventListener("keydown", toggleKeyboard);
+    document.removeEventListener("keyup", toggleKeyboard);
 }
 
 document.getElementById("game-start").addEventListener("click", gameStart);

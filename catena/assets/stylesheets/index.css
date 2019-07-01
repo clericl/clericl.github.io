@@ -8,6 +8,10 @@ body {
     min-height: 100vh;
 }
 
+a {
+    text-decoration: none;
+}
+
 .content {
     width: 65%;
     height: max-content;
@@ -106,13 +110,16 @@ body {
 }
 
 .icon {
-    width: 20px;
+    width: 18px;
     height: auto;
+    font-size: 20px;
     opacity: .3;
+    margin-left: 8px;
+    color: black;
 }
 
 .icon:hover {
-    opacity: .8;
+    opacity: 1;
 }
 
 .link {

@@ -15,6 +15,7 @@
 		<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/custom.css" />
+		<link rel="icon" type="image/x-icon" href="images/favicon.png">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -63,8 +64,8 @@
 						</div>
 						<p id="subtitle">software developer • word nerd • nyc</p>
 						<div class="game-info">
-							<div>Click on letters in my name to make words and score points (the longer the better)!</div>
-							<div>There are 139 possible words. Score 25 points to win!</div>
+							<div>Click on (or type) letters in my name to make words and score points!</div>
+							<div>Longer words are worth more points. Score 25 points to win!</div>
 						</div>
 						<ul class="actions game-buttons">
 							<li><div class="button" id="game-start">CLICK TO PLAY</button></li>
@@ -92,7 +93,7 @@
 							<div class="skill-content">
 								<div class="inner">
 									<h2>TOOLKIT</h2>
-									<ul class="image skill-list" style="margin:none;">
+									<ul class="image skill-list">
 											<i class="devicon-react-original colored" title="React.js"></i>
 											<span class="iconify" data-icon="simple-icons:redux" data-inline="false" title="Redux.js"></span>
 											<i class="devicon-javascript-plain colored" title="JavaScript ES6"></i>
@@ -118,17 +119,20 @@
 					<section id="two" class="wrapper style3 fade-up">
 						<div class="inner">
 							<h2>PROJECTS</h2>
-							<ul class="features">
+							<ul class="features project-list">
 								<li class="feature">
 									<a class="project-link" href="https://felixfb.herokuapp.com/#/" target="_blank">
 										<span class="project-info">felix is a social media application, inspired by Facebook and built on Ruby on Rails with React/Redux.</span>
 										<img class="project-image" id="felix-logo" src="./images/felix.png">
+										<img src="https://media.giphy.com/media/SVkgAKeivmTNnV7rqW/giphy.gif">
+										
 									</a>
 								</li>
 								<li class="feature">
 									<a class="project-link" href="https://clericl.github.io/catena/" target="_blank">
 										<span class="project-info">Catena is a word etymology mapper built with D3.js.</span>
-										<img class="project-image" src="./images/catena.png">
+										<img class="project-image" id="catena-logo" src="./images/catena.png">
+										<img src="https://media.giphy.com/media/Z9JwQC8lSvOFutR5GQ/giphy.gif">
 									</a>
 								</li>
 							</ul>
@@ -140,52 +144,27 @@
 						<div class="inner">
 							<h2>GET IN TOUCH</h2>
 							<div class="style1">
-								<!-- <section>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="name">Name</label>
-												<input type="text" name="name" id="name" />
-											</div>
-											<div class="field half">
-												<label for="email">Email</label>
-												<input type="text" name="email" id="email" />
-											</div>
-											<div class="field">
-												<label for="message">Message</label>
-												<textarea name="message" id="message" rows="5"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><a href="" class="button submit">Send Message</a></li>
-										</ul>
-									</form>
-								</section> -->
-								<!-- <section> -->
 									<ul class="mycontact">
 										<!-- <li>
 											<span>484 Clinton Ave #2B<br />
 											Brooklyn, NY 11238</span>
 										</li> -->
 										<li>
-											<a href="#">eliang58@gmail.com</a>
-										</li>
-										<li>
-											<span>(646) 339-0204</span>
-										</li>
-										<li>
 											<ul class="icons myicons">
-												<li><a href="https://github.com/clericl" class="myicons icon brands fa-github"><span class="label">GitHub</span></a></li>
-												<li><a href="https://www.linkedin.com/in/eliang58" class="myicons icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-												<li><a href="https://angel.co/eric-liang-7" class="myicons icon brands fa-angellist"><span class="label">AngelList</span></a></li>
+												<li><a href="mailto:eliang58@gmail.com" class="myicons far fa-envelope"><span class="label">eliang58@gmail.com</span></a></li>
+												<li><a class="myicons fas fa-mobile-alt"><span class="label">(646) 339-0204</span></a></li>
+												<li><a href="https://github.com/clericl" class="myicons icon brands fa-github" target="_blank"><span class="label">https://github.com/clericl</span></a></li>
+												<li><a href="https://www.linkedin.com/in/eliang58" class="myicons icon brands fa-linkedin-in" target="_blank"><span class="label">https://www.linkedin.com/in/eliang58</span></a></li>
+												<li><a href="https://angel.co/eric-liang-7" class="myicons icon brands fa-angellist" target="_blank"><span class="label">https://angel.co/eric-liang-7</span></a></li>
+												<li><a href="images/eric_liang.pdf" class="myicons far fa-file-alt" target="_blank"><span class="label">Click for resume</span></a></li>
 											</ul>
 										</li>
 									</ul>
-								<!-- </section> -->
+								<div class="contact-info"></div>
 							</div>
 						</div>
 					</section>
-
+					<script src="assets/js/contact.js"></script>
 			</div>
 
 		<!-- Footer -->
