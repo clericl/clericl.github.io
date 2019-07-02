@@ -311,6 +311,7 @@
 
 .game-info > div {
     width: max-content;
+    width: -moz-max-content;
 }
 
 @media screen and (min-width: 1681px) {
