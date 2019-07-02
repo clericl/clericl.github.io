@@ -286,7 +286,7 @@ function gameStart() {
     used = [];
     pointsBox.innerHTML = "";
     usedBox.innerHTML = "";
-    gameInfo.children[0].innerHTML = "Click on (or type) letters in my name to make words and score points!";
+    gameInfo.children[0].innerHTML = "Click or type letters in my name to make words and score points!";
             gameInfo.children[1].innerHTML = "Longer words are worth more points. Score 25 points to win!"
     
     rainbow.style.display = "none";
