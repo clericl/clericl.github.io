@@ -1,5 +1,6 @@
 let clicked = null;
 let keyboard = false;
+let cont = false;
 let points, used;
 
 const messages = [
@@ -158,7 +159,7 @@ const allowed = [
 ]
 
 function letterClick(e) {
-    if (points < 25) {
+    if (points < 25 || cont) {
         const box = document.querySelector(".scrabble-box");
         clicked = e.target;
         if (clicked.innerHTML !== "&nbsp;") {
@@ -172,21 +173,33 @@ function letterClick(e) {
 
 function resetLetters() {
     const box = document.querySelector(".scrabble-box");
-    box.children[0].innerHTML = points >= 25 ? "You did it!" : "";
-
     const name = document.querySelector(".scrabble");
-    while (name.firstChild) {
-        name.removeChild(name.firstChild);
-    };
+    const button = document.getElementById("game-start");
 
-    const letters = ["E", "R", "I", "C", "&nbsp;", "L", "I", "A", "N", "G"]
-    letters.forEach(letter => {
-        const node = document.createElement("h1");
-        node.setAttribute("class", "name-letter");
-        node.setAttribute("onclick", "letterClick(event)")
-        node.innerHTML = letter;
-        name.appendChild(node);
-    });
+    if (points < 25 || cont) {
+        if (box.children[0].innerHTML === "You did it!") {
+            button.innerHTML = "CLEAR WORD"
+        }
+
+        box.children[0].innerHTML = ""
+    
+        while (name.firstChild) {
+            name.removeChild(name.firstChild);
+        };
+    
+        const letters = ["E", "R", "I", "C", "&nbsp;", "L", "I", "A", "N", "G"]
+        letters.forEach(letter => {
+            const node = document.createElement("h1");
+            node.setAttribute("class", "name-letter");
+            node.setAttribute("onclick", "letterClick(event)")
+            node.innerHTML = letter;
+            name.appendChild(node);
+        });
+    } else if (points >= 25 && !cont) {
+        cont = true;
+        resetLetters();
+        box.children[0].innerHTML = "You did it!"
+    }
 }
 
 function checkAnswer() {
@@ -194,6 +207,7 @@ function checkAnswer() {
     const usedBox = document.querySelector(".used-words");
     const pointsBox = document.querySelector(".points");
     const gameInfo = document.querySelector(".game-info");
+    const button = document.getElementById("game-start");
 
     if (allowed.includes(answer) && !used.includes(answer)) {
         used.push(answer);
@@ -202,12 +216,12 @@ function checkAnswer() {
         points += answer.length;
         pointsBox.innerHTML = points;
 
-        if (points >= 25) {
+        if (points >= 25 && !cont) {
             showMessage(0);
             gameInfo.children[0].innerHTML = "Thanks for playing!";
             gameInfo.children[1].innerHTML = "Feel free to dive downward into my other projects."
             pointsBox.style.color = "gold";
-
+            button.innerHTML = "CONTINUE PLAYING"
         } else {
             showMessage(1);
         };
@@ -221,6 +235,7 @@ function showMessage(val) {
     div.style.color = val ? "white" : "gold";
 
     setTimeout(resetLetters, 150);
+    disableKeyboard();
     toggleModal();
     div.style.transition = "left .3s ease-in-out";
     div.style.left = "50%";
@@ -232,6 +247,8 @@ function showMessage(val) {
         setTimeout(() => {
             div.style.transition = "";
             div.style.left = "-100%";
+            document.addEventListener("keydown", enableKeyboard);
+            keyboard = true;
         }, 100);
     }, 1000);
 }
@@ -296,7 +313,7 @@ function gameStart() {
     gameInfo.style.opacity = 1;
     gameInfo.style.transform = "translateY(0)";
     pointsBox.style.opacity = 1;
-    usedBox.style.opacity = 1;
+    usedBox.style.opacity = .6;
     
     welcome.style.transform = 'translateY(4em)';
     

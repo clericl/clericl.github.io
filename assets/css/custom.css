@@ -26,24 +26,30 @@
     color: #764abc;
 }
 
+.skill-list-list {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 .skill-list {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
-    width: 85%;
+    width: max-content;
+    height: 85%;
     display: -moz-flex;
     display: -webkit-flex;
     display: -ms-flex;
     cursor: default;
     list-style: none;
-    padding-left: 0;
+    padding: 1em 0;
 }
 
 .skill-list > * {
-    font-size: 75px;
-    margin: .3em .2em;
-    /* filter: drop-shadow(4px 4px 2px #5f5f5f); */
+    font-size: 100px;
     filter: drop-shadow(4px 4px 1.5px #303030ab);
+    margin: .3em .3em;
 }
 
 .skill-content {
@@ -356,6 +362,10 @@
     .project-info {
         width: 90%;
     }
+
+    .skill-list > * {
+        font-size: 70px;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -387,6 +397,10 @@
     
     .used-words {
         max-width: 90%;
+    }
+
+    .skill-list > * {
+        font-size: 50px;
     }
 }
 
