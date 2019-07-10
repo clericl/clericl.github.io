@@ -366,11 +366,14 @@
 
     .project-info {
         width: 360px;
-        overflow: hidden;
     }
 
     .skill-list > * {
         font-size: 70px;
+    }
+
+    .wrapper {
+        overflow: hidden;
     }
 }
 
