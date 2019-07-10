@@ -365,7 +365,8 @@
     }
 
     .project-info {
-        width: 90%;
+        width: 360px;
+        overflow: hidden;
     }
 
     .skill-list > * {
