@@ -2006,11 +2006,12 @@ input, select, textarea {
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			margin-bottom: 2em;
 		}
 
-			.feature:first-of-type {
+			/* .feature:first-of-type {
 				margin-bottom: 2em;
-			}
+			} */
 
 			.features li .project-image {
 				-moz-transition: opacity 0.5s ease, -moz-transform 0.5s ease;
