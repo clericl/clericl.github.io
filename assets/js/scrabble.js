@@ -323,7 +323,6 @@ function gameStart() {
     setTimeout(() => {
         box.style.opacity = 1;
         endButton.style.opacity = 1;
-        subtitle.style.transform = "translateY(-15em)";
     }, 400);
 
     endButton.addEventListener("click", gameEnd);
@@ -371,7 +370,7 @@ function gameEnd() {
         subtitle.style.transform = "translateY(0)";
         gameInfo.style.opacity = 0;
         gameInfo.style.transform = "translateY(15em)";
-    }, 400);
+    }, 300);
 
     button.removeEventListener("click", resetLetters);
     button.addEventListener("click", gameStart);
