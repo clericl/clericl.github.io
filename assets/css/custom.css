@@ -32,6 +32,10 @@
     width: 100%;
 }
 
+i[title="Django"] {
+    color: #44B78B;
+}
+
 .skill-list {
     display: flex;
     flex-direction: column;
@@ -44,6 +48,11 @@
     cursor: default;
     list-style: none;
     padding: 1em 0;
+}
+
+#skill-row {
+    margin: 0;
+    padding: 0;
 }
 
 .skill-list > * {
