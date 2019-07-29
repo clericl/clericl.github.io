@@ -53,6 +53,7 @@ i[title="Django"] {
 #skill-row {
     margin: 0;
     padding: 0;
+    flex-direction: row;
 }
 
 .skill-list > * {
