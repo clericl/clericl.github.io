@@ -1,3 +1,16 @@
+const welcome = document.querySelector(".welcome-items");
+const rainbow = document.querySelector(".rainbow_text_animated");
+const letters = document.querySelector(".scrabble");
+const box = document.querySelector(".scrabble-box");
+const button = document.getElementById("game-start");
+const endButton = document.querySelector("#game-end");
+const subtitle = document.querySelector("#subtitle");
+const gameInfo = document.querySelector(".game-info");
+const pointsBox = document.querySelector(".points");
+const usedBox = document.querySelector(".used-words");
+const name = document.querySelector(".scrabble");
+const innerBox = document.querySelector(".scrabble-inner-box");
+
 let clicked = null;
 let keyboard = false;
 let cont = false;
@@ -172,10 +185,6 @@ function letterClick(e) {
 }
 
 function resetLetters() {
-    const box = document.querySelector(".scrabble-box");
-    const name = document.querySelector(".scrabble");
-    const button = document.getElementById("game-start");
-
     if (points < 25 || cont) {
         if (box.children[0].innerHTML === "You did it!") {
             button.innerHTML = "CLEAR WORD"
@@ -198,16 +207,13 @@ function resetLetters() {
     } else if (points >= 25 && !cont) {
         cont = true;
         resetLetters();
-        box.children[0].innerHTML = "You did it!"
+        box.children[0].innerHTML = "You did it!";
+        cont = false;
     }
 }
 
 function checkAnswer() {
     const answer = document.querySelector(".scrabble-inner-box").innerHTML.toLowerCase();
-    const usedBox = document.querySelector(".used-words");
-    const pointsBox = document.querySelector(".points");
-    const gameInfo = document.querySelector(".game-info");
-    const button = document.getElementById("game-start");
 
     if (allowed.includes(answer) && !used.includes(answer)) {
         used.push(answer);
@@ -215,13 +221,17 @@ function checkAnswer() {
         usedBox.innerHTML = used.join(" ");
         points += answer.length;
         pointsBox.innerHTML = points;
-
         if (points >= 25 && !cont) {
             showMessage(0);
             gameInfo.children[0].innerHTML = "Thanks for playing!";
             gameInfo.children[1].innerHTML = "Feel free to dive downward into my other projects."
             pointsBox.style.color = "gold";
-            button.innerHTML = "CONTINUE PLAYING"
+            button.innerHTML = "CONTINUE PLAYING";
+            button.removeEventListener("click", resetLetters);
+            button.addEventListener("click", () => {
+                cont = true;
+                resetLetters();
+            });
         } else {
             showMessage(1);
         };
@@ -288,17 +298,6 @@ function toggleKeyboard(e) {
 }
 
 function gameStart() {
-    const welcome = document.querySelector(".welcome-items");
-    const rainbow = document.querySelector(".rainbow_text_animated");
-    const letters = document.querySelector(".scrabble");
-    const box = document.querySelector(".scrabble-box");
-    const button = document.getElementById("game-start");
-    const endButton = document.querySelector("#game-end");
-    const subtitle = document.querySelector("#subtitle");
-    const gameInfo = document.querySelector(".game-info");
-    const pointsBox = document.querySelector(".points");
-    const usedBox = document.querySelector(".used-words");
-
     points = 0;
     used = [];
     pointsBox.innerHTML = "";
@@ -338,18 +337,6 @@ function gameStart() {
 }
 
 function gameEnd() {
-    const welcome = document.querySelector(".welcome-items");
-    const rainbow = document.querySelector(".rainbow_text_animated");
-    const letters = document.querySelector(".scrabble");
-    const box = document.querySelector(".scrabble-box");
-    const innerBox = document.querySelector(".scrabble-inner-box");
-    const button = document.getElementById("game-start");
-    const endButton = document.querySelector("#game-end");
-    const subtitle = document.querySelector("#subtitle");
-    const gameInfo = document.querySelector(".game-info");
-    const pointsBox = document.querySelector(".points");
-    const usedBox = document.querySelector(".used-words");
-
     resetLetters();
     points = 0;
     used = [];
